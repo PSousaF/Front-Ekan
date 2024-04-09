@@ -1,0 +1,26 @@
+<div class="d-flex align-items-center bg-light">
+    <div class="container">
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div class="col-xl-5 col-md-8">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="bg-white rounded shadow-5-strong p-5">
+                    <h2 class="d-flex justify-content-center mb-5">Login Ekan</h2>
+                    <div class="form-outline mb-4">
+                        <input type="email" class="form-control"  id="inputUsername" formControlName="login"  (focus)='leaveError()' placeholder="Usuário" required autofocus/>
+                        <label class="form-label" for="formUsuario">Usuário</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="password" id="formSenha" class="form-control" id="inputPassword" formControlName="password" (focus)='leaveError()' placeholder="******" required/>
+                        <label class="form-label" for="formSenha">Senha</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block float-end">Acessar</button>
+                    <div class="form-outline mb-4">
+                        <h6 class="form-label text-secondary">*apenas visual (sem verificação)</h6>
+                    </div>
+                    <div class="d-flex justify-content-center" *ngIf="showError" @fadeIn @fadeOut >
+                        <div class="alert alert-show" role="alert"  [ngClass]="errorStyle"><strong>{{ errorMsg }}</strong></div>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

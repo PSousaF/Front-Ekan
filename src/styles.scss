@@ -1,0 +1,22 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+.alert-show {
+    position:fixed; 
+    top: 10px; 
+    right: 10px; 
+    z-index:9999; 
+    border-radius:10px
+}
+.btn-width {
+    max-width: 130px;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.icon-input {
+    border-radius: 9px 0 0 9px;
+}
